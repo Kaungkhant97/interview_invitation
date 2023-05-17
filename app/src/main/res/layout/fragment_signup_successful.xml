@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/margin_medium"
+    tools:context=".SignupSuccessfulFragment">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_congrats_title"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            android:textAlignment="center"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/txt_congrats_description"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_cancel_invite"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:backgroundTint="@android:color/holo_red_light"/>
+    </LinearLayout>
+
+
+</FrameLayout>

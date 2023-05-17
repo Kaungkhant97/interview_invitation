@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph">
+
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.example.invitation.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/to_signupSuccessfulFragment"
+            app:destination="@id/signupSuccessfulFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signupSuccessfulFragment"
+        android:name="com.example.invitation.SignupSuccessfulFragment"
+        android:label="fragment_signup_successful"
+        tools:layout="@layout/fragment_signup_successful">
+        <action
+            android:id="@+id/to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
