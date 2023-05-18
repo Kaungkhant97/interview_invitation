@@ -1,5 +1,4 @@
-# interview_invitation
+# Invitation for Brocoli & Co
 
-# Video Recording link
+![demo](https://raw.githubusercontent.com/Kaungkhant97/interview_invitation/master/demo.mp4)
 
-<video src="demo.mp4"></video>
