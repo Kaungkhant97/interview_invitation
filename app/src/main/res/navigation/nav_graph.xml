@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.example.invitation.RegisterFragment"
+        android:name="com.example.invitation.presentation.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register">
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/signupSuccessfulFragment"
-        android:name="com.example.invitation.SignupSuccessfulFragment"
+        android:name="com.example.invitation.presentation.SignupSuccessfulFragment"
         android:label="fragment_signup_successful"
         tools:layout="@layout/fragment_signup_successful">
         <action

@@ -1,5 +1,7 @@
 package com.example.invitation.data
 
+import com.example.invitation.data.entity.ErrorResponse
+import com.example.invitation.data.entity.User
 import com.google.gson.Gson
 import java.lang.Exception
 import javax.inject.Inject

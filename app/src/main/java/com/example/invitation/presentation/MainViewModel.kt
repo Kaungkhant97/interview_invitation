@@ -1,4 +1,4 @@
-package com.example.invitation
+package com.example.invitation.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel

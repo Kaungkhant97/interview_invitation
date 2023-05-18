@@ -1,4 +1,4 @@
-package com.example.invitation
+package com.example.invitation.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

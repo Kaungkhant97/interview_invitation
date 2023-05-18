@@ -1,4 +1,4 @@
-package com.example.invitation
+package com.example.invitation.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -17,7 +17,7 @@ import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 @HiltViewModel
-class RegisterViewModel @Inject constructor(val userRepository: UserRepository) : ViewModel() {
+class RegisterViewModel @Inject constructor(private val userRepository: UserRepository) : ViewModel() {
 
     val signUpResult: LiveData<Result<Unit>>
         get() = _signUpResult
@@ -62,8 +62,7 @@ class RegisterViewModel @Inject constructor(val userRepository: UserRepository) 
     }
 
     fun onNameChange(text: CharSequence?) {
-        if (text == null) _nameViewState.value =
-            InputViewState(false, "This field cannot be empty", text)
+        if (text == null) _nameViewState.value = InputViewState(false, "This field cannot be empty", text)
 
         val isthreeCharacterLong = text!!.length >= 3
 
@@ -95,7 +94,7 @@ class RegisterViewModel @Inject constructor(val userRepository: UserRepository) 
                 val isConfirmEmailSame = text.toString() == it
                 if (!isConfirmEmailSame) {
                     _confirmEmailViewState.value =
-                        InputViewState(false, "email need to be the same", it)
+                        InputViewState(false, "Email need to be the same", it)
                 } else {
                     _confirmEmailViewState.value = InputViewState(true, currentValue = it)
                 }
@@ -114,7 +113,7 @@ class RegisterViewModel @Inject constructor(val userRepository: UserRepository) 
                 _confirmEmailViewState.value = InputViewState(true, currentValue = text.toString())
             } else {
                 _confirmEmailViewState.value =
-                    InputViewState(false, "email need to be the same", text.toString())
+                    InputViewState(false, "Email need to be the same", text.toString())
             }
         } else {
             _confirmEmailViewState.value =

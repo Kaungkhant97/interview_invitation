@@ -5,7 +5,7 @@
     <string name="txt_full_name">Full name</string>
     <string name="txt_btn_send">Send</string>
     <string name="btn_cancel_invite">Cancel Invite</string>
-    <string name="txt_congrats_description">You have successfully registered please wait for us to Contact</string>
-    <string name="txt_congrats_title">Congratulation</string>
+    <string name="txt_congrats_description">You have successfully registered.\n We will be contacting you very soon.</string>
+    <string name="txt_congrats_title">Congratulation!</string>
     <string name="txt_title_register"><![CDATA[Broccoli & Co]]></string>
 </resources>

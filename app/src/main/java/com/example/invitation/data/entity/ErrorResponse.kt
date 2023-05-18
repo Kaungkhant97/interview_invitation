@@ -1,4 +1,4 @@
-package com.example.invitation.data
+package com.example.invitation.data.entity
 
 import com.google.gson.annotations.SerializedName
 

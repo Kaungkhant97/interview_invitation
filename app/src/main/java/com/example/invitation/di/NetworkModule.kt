@@ -1,5 +1,6 @@
-package com.example.invitation
+package com.example.invitation.di
 
+import com.example.invitation.BuildConfig
 import com.example.invitation.data.InvitationApi
 import dagger.Module
 import dagger.Provides
@@ -37,7 +38,7 @@ object NetworkModule {
 
     @Singleton
     @Provides
-    fun provideRetrofit(client: OkHttpClient): Retrofit = Retrofit.Builder().baseUrl("https://us-central1-blinkapp-684c1.cloudfunctions.net/")
+    fun provideRetrofit(client: OkHttpClient): Retrofit = Retrofit.Builder().baseUrl(BuildConfig.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .client(client)
             .build()

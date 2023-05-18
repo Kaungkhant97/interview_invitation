@@ -17,7 +17,8 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "com.example.HiltTestRunner"
+        buildConfigField ("String", "BASE_URL", "\"https://us-central1-blinkapp-684c1.cloudfunctions.net/\"")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {

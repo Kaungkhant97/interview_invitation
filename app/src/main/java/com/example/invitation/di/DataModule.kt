@@ -1,4 +1,4 @@
-package com.example.invitation
+package com.example.invitation.di
 
 import android.content.Context
 import androidx.datastore.core.DataStore
@@ -13,6 +13,7 @@ import com.example.invitation.data.UserLocalDataStore
 import com.example.invitation.data.UserLocalDataStoreImpl
 import com.example.invitation.data.UserRepository
 import com.example.invitation.data.UserRepositoryImpl
+import com.example.invitation.util.Constants.Companion.MYPREFERENCENAME
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -42,9 +43,9 @@ object DataModule {
             corruptionHandler = ReplaceFileCorruptionHandler(
                 produceNewData = { emptyPreferences() }
             ),
-            migrations = listOf(SharedPreferencesMigration(appContext, "USER_PREFERENCES")),
+            migrations = listOf(SharedPreferencesMigration(appContext, MYPREFERENCENAME)),
             scope = CoroutineScope(Dispatchers.IO + SupervisorJob()),
-            produceFile = { appContext.preferencesDataStoreFile("USER_PREFERENCES") }
+            produceFile = { appContext.preferencesDataStoreFile(MYPREFERENCENAME) }
         )
     }
 

@@ -1,10 +1,10 @@
-package com.example.invitation
+package com.example.invitation.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.navigation.fragment.NavHostFragment
+import com.example.invitation.R
 import com.example.invitation.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
